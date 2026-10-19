@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #0f172a;
+    background-color: #f8fafc;
+    background-image: url("img/bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Шапка и меню */
+header {
+    background: #1e3a8a;
+    color: #ffffff;
+    padding: 16px 24px;
+}
+
+.logo {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+nav a:hover,
+nav a.active {
+    text-decoration: underline;
+}
+
+/* Основное содержимое */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+h2 {
+    color: #1e3a8a;
+}
+
+a {
+    color: #2563eb;
+}
+
+/* Блок с картинкой на главной */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.hero img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+/* Карточки */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 16px;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Адаптивность: на широком экране карточки в ряд */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1;
+    }
+}
+
+/* Картинка внизу главной */
+.picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Белая подложка под текстом, чтобы он читался на фоне */
+main {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
